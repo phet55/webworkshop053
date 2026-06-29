@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Heading-Workshop</title>
+    <style>
+     *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+     }
+    .text-tital{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    body{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-color: rgb(221, 221, 224);
+    }
+    header{
+        background: linear-gradient(90deg,rgb(197, 14, 14),rgb(211, 121, 121));
+        padding: 25px 20px;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        box-shadow: 0px 4px 8px;
+        
+
+    }
+    .container{
+        max-width: 1100px;
+        margin: 0 auto;
+
+    }
+    .text-center{
+        text-align: center;
+    }
+    .card{
+        background-color: aliceblue;
+        border-radius: 10px;
+        box-shadow: 0 4 8 rgb(196, 141, 141);
+        border-top:5px solid rgb(168, 7, 7) ;
+        padding: 20px  50px;
+        margin-bottom: 2%;
+    }
+    
+    pre{
+        background-color: rgb(235, 229, 229);
+            <!-- border-left: 5px solid rgb(136, 12, 43); -->
+            padding: 10px 0 0 0 ;
+            border-radius: 15px;
+            border-top: 3px solid rgb(136, 12, 43);
+            border-bottom: 3px solid rgb(136, 12, 43);
+            overflow-x: auto;
+            white-space: pre-wrap;
+    }
+    a {
+            text-decoration: none;
+            color: white;
+            font-size:small;
+        }
+    a:hover {
+            
+           text-decoration: underline;
+        
+        }
+    .note{
+        border-left: 4px solid gray;
+        background-color: azure;
+
+    }
+     .note::before{
+        content:"📌";
+        
+    }
+.hero {
+    padding: 40px 0 ;
+
+}
+.hero-text-h1{
+    font-size:46px ;
+    margin-bottom: 10px;
+    color: rgb(165, 2, 38);
+
+}
+.hero-text-p{
+    font-size:20px ;
+    color: rgb(85, 85, 85);
+
+}
+
+.h1-label {
+    background-color: rgb(156, 7, 175);
+    border-radius: ;
+    padding: ;
+}
+.h2-label {
+    background-color: rgb(4, 8, 197);
+}
+.h3-label {
+    background-color: rgb(4, 88, 197);
+}
+.h4-label {
+    background-color: rgb(4, 197, 78);
+}
+.h5-label {
+    background-color: rgb(216, 219, 9);
+}
+.h6-label {
+    background-color: rgb(236, 7, 7);
+}
+
+
+    </style>
+</head>
+<body>
+    <header class="text-tital">
+        <p>เรียนรู้เว็บเบื้องต้น</p>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+    
+    
+    <div class="container">
+    <section class="hero">
+        <h1 class="hero-text-h1"" >แบบฝึกหัด:HTML Heading</h1>
+        <p class="hero-text-p">ฝึกใช้แท็ก &lt;h1&gt; – &lt;h6&gt; และการปรับขนาดหัวข้อด้วย CSS</p>
+    </section>
+    <div class="card">
+    
+        <h2> ความหมายของ Headings (H1–H6) เป็น หัวข้อรองของหน้าเว็บ</h2>
+        <p> HTML มีหัวข้อทั้งหมด 6 ระดับ</p>
+        <ul>
+            <li><span class="h1-label">H1</span> – หัวข้อใหญ่สุด ใช้สำหรับชื่อหน้าเว็บหรือหัวข้อหลัก</li>
+            <li><span class="h2-label">H2</span> – หัวข้อรอง แบ่ง Section ของเนื้อหา</li>
+            <li><span>H3</span> – หัวข้อย่อยภายใน H2</li>
+            <li>H4 – ย่อยลงไปอีกระดับ</li>
+            <li>H5 – ใช้น้อย แต่เน้นลำดับข้อมูล</li>
+            <li>H6 – เล็กสุด ใช้กับหัวข้อระดับลึก</li>
+        </ul>
+        <p class="note">H1 ควรมีเพียง 1 อันในแต่ละหน้า เพื่อช่วย SEO และโครงสร้างเอกสาร</p>
+    </div>
+    
+    <div class="card">
+    
+        ้<h2>2. ตัวอย่างการใช ้H1–H6</h2>
+        <pre><code>
+            
+             &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+             &lt;h2&gt;HTML Basics&lt;/h2&gt;
+             &lt;h3&gt;What is HTML?&lt;/h3&gt;
+             &lt;h4&gt;HTML Syntax&lt;/h4&gt;
+             &lt;h5&gt;Example Code&lt;/h5&gt;
+             &lt;h6&gt;Note: Case Sensitive&lt;/h6&gt;
+        </code>
+        </pre>
+        <p class="note">เมื่อแสดงผลจะได้ลดลั่นแบบนี้</p>
+            <h1>H1: Welcome to My Website</h1>
+            <h2>H2: HTML Basics</h2>
+            <h3>H3: What is HTML?</h3>
+            <h4>H4: HTML Syntax</h4>
+            <h5>H5: Example Code</h5>
+            <h6>H6: Note about headin</h6>
+    </div>
+</div>
+
+    <p class="text-center"><a href="index.html">🏠Back to Home</a></p>
+
+
+
+
+</body>
+</html>
