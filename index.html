@@ -7,26 +7,47 @@
     <title>Web workshop : 684259053</title>
 
     <style>
+        html{
+            scroll-behavior: smooth;
+        }
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
             margin: 50px; /* แก้ไขให้มีหน่วย px */
             padding: 0;
+            background-color: rgb(199, 231, 173);
+            line-height:1.4;
         }
         pre{
-            background-color: rgb(255, 193, 118);
+            background-color: rgb(238, 236, 233);
             border-left: 5px solid cyan;
             padding: 10px 0 0 0 ;
             font-size: 16px;
+            border-radius: 6px;
+
+            white-space: pre-wrap;
         }
         h1 {
             color :rgb(190, 9, 9);
         }
         h2 {
-            color: rgb(14, 14, 170);
+            color: rgb(82, 7, 117);
         }
         .green-text {
             color: rgb(9, 102, 9);
         }
+        a {
+            text-decoration: none;
+            
+        }
+        a:hover {
+            text-decoration: underline;
+            color: crimson;
+            
+        }
+        .text-center{
+            text-align: center;
+        }
+        
     </style>
 </head>
 <body>
@@ -45,7 +66,6 @@
         <li><a href="#images">Adding Images</a></li>
         <li><a href="#tables">Creating Tables</a></li>
         <li><a href="#forms">HTML Forms</a></li>
-        <li><a href="#multimedia">Embedding Multimedia (Audio & Video)</a></li>
         <li><a href="#semantic">Semantic HTML</a></li>
         <li><a href="#workshop">Work Shop</a></li>
     </ul>
@@ -60,14 +80,15 @@
     - HTML elements are represented by tags
     - HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
     - Browsers do not display the HTML tags, but use them to render the content of the page
-    - HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages
+    - HTML can embed programs written in a scripting language such as JavaScript, which affects the    behavior and content of web pages
     - HTML is not a programming language, but a markup language
     </pre>
 
     <a href="#top">back to Top</a>
 
     <h2 id="structure">HTML Document Structure</h2>
-    <pre>คําอธิบาย:
+    <p>An HTML Document has the following basic structure..</p>
+    <pre> คําอธิบาย:
 &lt;!DOCTYPE html&gt;: ระบุว่าเป็นเอกสาร HTML5
 &lt;html&gt;: เป็นรากของเอกสาร HTML ทั้งหมด
 &lt;head&gt;: ส่วนที่ใช้เก็บข้อมูลเมตา เช่น &lt;title&gt; ชื่อหน้าเว็บ
@@ -84,6 +105,8 @@
     <a href="#top">back to Top</a>
 
     <h2 id="heading">Heading</h2>
+    <P>HTML headings are defined with the &lt;h1&</P>
+    <p><a href="W03-heading.html">workshop</a></p>
     <pre>
     - &lt;h1&gt;: Heading 1
     - &lt;h2&gt;: Heading 2
@@ -97,15 +120,15 @@
     <a href="#top">back to Top</a>
 
     <h2 id="paragraph">Paragraph</h2>
+    <p>HTML paragraphs are defined with the <p> tag...   workshop  - &lt;</p>
     <pre>
-     workshop
-HTML paragraphs are defined with the <p> tag...
- - &lt;
+  - &lt;p&gt;: Paragraph
     </pre>
     
     <a href="#top">back to Top</a>
 
     <h2 id="formatting">Text Formatting</h2>
+    <p>HTML provides various elements to format text...</p>
     <pre>- &lt;h1&gt; to &lt;h6&gt;: Headings
 - &lt;p&gt;: Paragraph
 - &lt;pre&gt;: Preformatted text
@@ -131,6 +154,7 @@ HTML paragraphs are defined with the <p> tag...
     <a href="#top">back to Top</a>
 
     <h2 id="links">Creating Links</h2>
+    <P>HTML links are defined with the <&a> tag ...</P>
     <pre>- &lt;a href="url" target=""&gt;Link text&lt;/a&gt;
 - The href attribute specifies the URL of the page the link goes to
 - The target attribute specifies where to open the linked document
@@ -153,9 +177,9 @@ HTML paragraphs are defined with the <p> tag...
 </pre>
     
     <a href="#top">back to Top</a>
-
     <h2 id="lists-dup">HTML Document Structure</h2>
-    <pre>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...
+    <p>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...</p>
+   <pre>
 - &lt;ul&gt;: Unordered list
 - &lt;ol&gt;: Ordered list
 - &lt;li&gt;: List item
@@ -198,9 +222,10 @@ HTML paragraphs are defined with the <p> tag...
 </pre>
     
     <a href="#top">back to Top</a>
-
-    <h2 id="lists">Lists (Ordered and Unordered)</h2>
-    <pre>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...
+ <h2 id="lists">Lists (Ordered and Unordered)</h2>
+ <p>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...</p>
+    <pre>
+   
 - &lt;ul&gt;: Unordered list
 - &lt;ol&gt;: Ordered list
 - &lt;li&gt;: List item
@@ -244,6 +269,7 @@ HTML paragraphs are defined with the <p> tag...
     <a href="#top">back to Top</a>
 
     <h2 id="images">Adding Images</h2>
+    <p>HTML images are defined with the &lt;img&gt; tag...</p>
     <pre>- &lt;img src="url" alt="description"&gt;
 - The src attribute specifies the URL of the image
 - The alt attribute provides a description of the image
@@ -287,6 +313,7 @@ object-fit: cover;
     <a href="#top">back to Top</a>
 
     <h2 id="tables">Creating Tables</h2>
+    <p>HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...</p>
     <pre>Workshop 1
 Workshop 2
 HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...
@@ -299,6 +326,7 @@ HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;
     <a href="#top">back to Top</a>
 
     <h2 id="forms">HTML Forms</h2>
+    <p>HTML forms are defined with the &lt;form&gt; tag...</p>
     <pre>หัวข ้อเกี่ยวกับฟอร์ม
 1. โครงสร้างพื้นฐานของฟอร์ม
 - &lt;form>: ใชเ้ป็นตวัครอบขอ้มูลในฟอรม์
@@ -332,26 +360,10 @@ radio, checkbox, date, file
     
     <a href="#top">back to Top</a>
 
-    <h2 id="multimedia">Embedding Multimedia (Audio & Video)</h2>
-    <pre>&lt;video&gt;: การฝังไฟล์วิดีโอลงบนหน้าเว็บ
-  ตัวอย่าง:
-  &lt;video width="320" height="240" controls&gt;
-    &lt;source src="movie.mp4" type="video/mp4"&gt;
-    Your browser does not support the video tag.
-  &lt;/video&gt;
 
-&lt;audio&gt;: การฝังไฟล์เสียงลงบนหน้าเว็บ
-  ตัวอย่าง:
-  &lt;audio controls&gt;
-    &lt;source src="horse.mp3" type="audio/mpeg"&gt;
-    Your browser does not support the audio element.
-  &lt;/audio&gt;
-
-*หมายเหตุ: Attribute 'controls' จำเป็นต้องใส่เพื่อให้แสดงปุ่ม เล่น/หยุด/ปรับเสียง</pre>
-    
-    <a href="#top">back to Top</a>
 
     <h2 id="semantic">Semantic HTML</h2>
+    <p>Semantic HTML elements clearly define the content of a web page...</p>
     <pre>- &lt;header&gt;: Defines a header for a document or section
 - &lt;nav&gt;: Defines navigation links
 - &lt;section&gt;: Defines a section in a document
@@ -363,12 +375,15 @@ radio, checkbox, date, file
 
     <h2 id="workshop">My Workshop</h2>
     <ul>
-        <li>work shop 01:rabbit</li>
-        <li>work shop 02:login</li>
+        <li><a href="#top">work shop 01:rabbit</a></li>
+        <li><a href="#top">work shop 02:login</a></li>
     </ul>
     
     <a href="#top">back to Top</a>
     <hr>
-    <a href="https://www.w3schools.com/html/" target="_blank">Learn more HTML</a>
+    <div class="text-center">
+        <a href="https://www.w3schools.com/html/"target="_blank">Learn more HTML</a>
+         <p>&copy; 2026 HTML Tutorial by Adison Phobiasi</p>
+    </div>
 </body>
 </html>
