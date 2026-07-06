@@ -1,0 +1,75 @@
+{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        } 
+
+
+
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #ebf8ff;
+            
+            line-height: 1.6;
+        }
+
+        
+        footer,
+        .hero,
+        .card,
+        .tip-box {
+            border:1px solid red;
+            background-color: #ebf8ff;
+            margin: 20px auto;
+            padding: 20px;
+
+        }
+        header{
+            background: linear-gradient(to right, #042b80, #09b0f1);
+            padding: 30px 20px;
+            color: white;
+            box-shadow: #131313;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand{
+            display: flex;
+            align-items:center;
+            gap: 10px;
+        }
+        .brand-icon{font-size: 50px;
+
+        }
+        .brand-text p{font-size: 14px;
+
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            
+        }
+        nav a:hover{
+            
+            text-decoration: underline;
+            
+            
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            width: 100%;
+
+            background-color:rgb(110, 255, 65);
+        }
+        .card-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            background-color: yellow;
+
+        }
