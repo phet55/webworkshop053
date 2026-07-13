@@ -1,75 +1,205 @@
-{
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        } 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ebf8ff;
 
+  line-height: 1.6;
+}
 
-         body {
-            font-family: Arial, sans-serif;
-            background-color: #ebf8ff;
-            
-            line-height: 1.6;
-        }
+footer,
+/* .hero, */
+/* .card, */
+.tip-box {
+  border: 1px solid red;
+  background-color: #ebf8ff;
+  margin: 20px auto;
+  padding: 20px;
+}
+/* =======================
+            Header/ Navigation
+            ======================*/
+header {
+  background: linear-gradient(to right, #042b80, #09b0f1);
+  padding: 30px 20px;
+  color: white;
+  box-shadow: #131313;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+}
 
-        
-        footer,
-        .hero,
-        .card,
-        .tip-box {
-            border:1px solid red;
-            background-color: #ebf8ff;
-            margin: 20px auto;
-            padding: 20px;
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.brand-icon {
+  font-size: 50px;
+}
+.brand-text p {
+  font-size: 14px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+/* =======================
+            Hero Section
+            ======================*/
+.hero {
+  padding: 45px 70px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
-        }
-        header{
-            background: linear-gradient(to right, #042b80, #09b0f1);
-            padding: 30px 20px;
-            color: white;
-            box-shadow: #131313;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.hero-icon {
+  background-color: rgb(24, 24, 189);
+  background: linear-gradient(135deg, #042b80, #09b0f1);
+  color: white;
+  font-size: 50px;
+  border-radius: 20px;
+  padding: 20px;
+  font-weight: bold;
+  box-shadow: 0 8px 24px rgb(87, 136, 243);
+}
 
-        .brand{
-            display: flex;
-            align-items:center;
-            gap: 10px;
-        }
-        .brand-icon{font-size: 50px;
+.hero-text {
+}
+.hero-text h1 {
+  color: rgb(10, 10, 151);
+  font-weight: bold;
+  font-size: 50px;
+}
+.hero-text p {
+  color: gray;
+}
 
-        }
-        .brand-text p{font-size: 14px;
+/* =======================
+            Main Section
+            ======================*/
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
 
-        }
-        nav a{
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 10px 15px;
-            
-        }
-        nav a:hover{
-            
-            text-decoration: underline;
-            
-            
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            width: 100%;
+  background-color: rgb(110, 255, 65);
+}
+.card-grid {
+  display: grid;
 
-            background-color:rgb(110, 255, 65);
-        }
-        .card-grid{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  background-color: yellow;
+}
+.card {
+  background-color: white;
+  border: 1px solid rgb(189, 187, 187);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px white;
+  /* padding: 20px; */
+  overflow: hidden;
+}
+.card-header {
+  background-color: rgb(175, 174, 240);
+  color: rgb(60, 167, 255);
+  font-weight: bold;
+  font-size: 20px;
+  padding: 20px;
+}
+.card-header-icon {
+  color: rgb(255, 255, 255);
+  background-color: rgb(67, 28, 238);
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 20px;
+}
+.card-body {
+  padding: 40px;
+}
+.format-row {
+  padding: 8px 0;
+  border-bottom: 1px solid rgb(216, 216, 216);
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  gap: 5px;
+}
 
-            background-color: yellow;
+.label {
+  color: rgb(251, 251, 252);
+  /* background-color: rgb(28, 3, 255); */
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+}
 
-        }
+.b-label {
+  background-color: rgb(28, 3, 255);
+}
+.strong-label {
+  background-color: rgb(250, 165, 9);
+}
+.i-label {
+  background-color: rgb(190, 4, 236);
+}
+.em-label {
+  background-color: rgb(9, 238, 200);
+}
+.u-label {
+  background-color: rgb(14, 212, 90);
+}
+.mark-label {
+  background-color: rgb(204, 11, 69);
+}
+.small-label {
+  background-color: rgb(212, 245, 24);
+}
+.del-label {
+  background-color: rgb(45, 168, 199);
+}
+.sup-label {
+  background-color: rgb(199, 29, 29);
+}
+.sub-label {
+  background-color: rgb(65, 139, 224);
+}
+/* card 2 */
+.code-box {
+  background-color: black;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+}
+pre {
+  font-size: 16px;
+  line-height: 1.6;
+  color: green;
+}
+.lien-no {
+  color: blue;
+}
+/* card-3 */
+.check {
+  .activity-list {
+    list-style: none;
+  }
+  .activity-list l i {
+    list-style: none;
+  }
+  background-color: green;
+  padding: 10px;
+  border-radius: 50%;
+}
