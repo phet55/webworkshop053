@@ -3,56 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="เว็บไซต์สำหรับแนะนำการใช้งาน  html css and workshop"> 
+    <meta name="description" content="เว็บไซต์สำหรับแนะนำการใช้งาน html css and workshop"> 
     <title>Web workshop : 684259053</title>
 
     <style>
-        html{
+        html {
             scroll-behavior: smooth;
         }
-        body {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            margin: 50px; /* แก้ไขให้มีหน่วย px */
-            padding: 0;
-            background-color: rgb(199, 231, 173);
-            line-height:1.4;
-        }
-        pre{
-            background-color: rgb(238, 236, 233);
-            border-left: 5px solid cyan;
-            padding: 10px 0 0 0 ;
-            font-size: 16px;
-            border-radius: 6px;
 
-            white-space: pre-wrap;
+        body {
+            font-family: 'Courier New', Courier, monospace, Verdana, sans-serif;
+            margin: 40px auto;
+            max-width: 900px;
+            padding: 0 20px;
+            background-color: #f8fafc;
+            color: #1e293b;
+            line-height: 1.5;
         }
+
         h1 {
-            color :rgb(190, 9, 9);
+            color: #1e40af;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
         }
+
         h2 {
-            color: rgb(82, 7, 117);
+            color: #2563eb;
+            font-size: 1.6rem;
+            margin-top: 30px;
+            margin-bottom: 15px;
         }
-        .green-text {
-            color: rgb(9, 102, 9);
+
+        p {
+            margin-bottom: 15px;
         }
+
         a {
+            color: #2563eb;
             text-decoration: none;
-            
         }
+
         a:hover {
             text-decoration: underline;
-            color: crimson;
-            
         }
-        .text-center{
-            text-align: center;
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
         }
-        
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        pre {
+            background-color: #f1f5f9;
+            border-left: 6px solid #3b82f6;
+            padding: 15px;
+            font-size: 15px;
+            font-family: monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            margin: 15px 0;
+            line-height: 1.4;
+            color: #0f172a;
+            border-radius: 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #cbd5e1;
+            margin: 25px 0;
+        }
+
+        .back-to-top {
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 0.9rem;
+            color: #2563eb;
+        }
+
+       
+        .workshop-container {
+            border: 1px solid #3b82f6;
+            padding: 20px;
+            background-color: #ffffff;
+            margin-top: 30px;
+            border-radius: 6px;
+        }
+
+        .workshop-container h2 {
+            margin-top: 0;
+        }
     </style>
 </head>
 <body>
-    <h1 id="top">HTML tutorial</h1>
+
+    <h1 id="top">HTML Tutorial</h1>
     <p>Welcome to the HTML tutorial. Click on the topics below to start learning:</p>
+
     <h2>Topics</h2>
     <ul>
         <li><a href="#introduction">Introduction to HTML</a></li>
@@ -60,76 +109,68 @@
         <li><a href="#heading">Heading</a></li>
         <li><a href="#paragraph">Paragraph</a></li>
         <li><a href="#formatting">Text Formatting</a></li>
-        <li><a href="#links">Creating Links</a></li>
-        <li><a href="#lists-dup">HTML Document Structure (Lists)</a></li>
         <li><a href="#lists">Lists (Ordered and Unordered)</a></li>
+        <li><a href="#links">Creating Links</a></li>
         <li><a href="#images">Adding Images</a></li>
         <li><a href="#tables">Creating Tables</a></li>
         <li><a href="#forms">HTML Forms</a></li>
         <li><a href="#semantic">Semantic HTML</a></li>
-        <li><a href="#workshop">Work Shop</a></li>
+        <li><a href="#workshop">Workshop</a></li>
     </ul>
+
     <hr>
 
     <h2 id="introduction">Introduction to HTML</h2>
-    <pre>
-    - HTML is the standard markup language for creating Web pages
-    - HTML describes the structure of a Web page
-    - HTML consists of a series of elements
-    - HTML elements tell the browser how to display the content
-    - HTML elements are represented by tags
-    - HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
-    - Browsers do not display the HTML tags, but use them to render the content of the page
-    - HTML can embed programs written in a scripting language such as JavaScript, which affects the    behavior and content of web pages
-    - HTML is not a programming language, but a markup language
-    </pre>
-
-    <a href="#top">back to Top</a>
+    <pre>- HTML is the standard markup language for creating Web pages
+- HTML describes the structure of a Web page
+- HTML consists of a series of elements
+- HTML elements tell the browser how to display the content
+- HTML elements are represented by tags
+- HTML tags label pieces of content such as "heading", "paragraph", "table", and so on
+- Browsers do not display the HTML tags, but use them to render the content of the page
+- HTML can embed programs written in a scripting language such as JavaScript, which affects the behavior and content of web pages
+- HTML is not a programming language, but a markup language</pre>
+    <p><a href="#top" class="back-to-top">Back To Top</a></p>
 
     <h2 id="structure">HTML Document Structure</h2>
     <p>An HTML Document has the following basic structure..</p>
-    <pre> คําอธิบาย:
+    <pre>คำอธิบาย:
 &lt;!DOCTYPE html&gt;: ระบุว่าเป็นเอกสาร HTML5
 &lt;html&gt;: เป็นรากของเอกสาร HTML ทั้งหมด
 &lt;head&gt;: ส่วนที่ใช้เก็บข้อมูลเมตา เช่น &lt;title&gt; ชื่อหน้าเว็บ
 &lt;body&gt;: ส่วนที่จะแสดงผลบนหน้าเว็บ
-องค์ประกอบส าคัญของ HTML
+องค์ประกอบสำคัญของ HTML
 แท็ก (Tags):
 - แท็กเริ่มต้น (Opening Tag): เช่น &lt;h1&gt;
 - แท็กปิด (Closing Tag): เช่น &lt;/h1&gt;
 แอตทริบิวต์ (Attributes): คุณสมบัติของแท็ก
-- ใช้เพื่อก าหนดคุณสมบัติเพิ่มเติม เช่น href, src, width, height
+- ใช้เพื่อกำหนดคุณสมบัติเพิ่มเติม เช่น href, src, width, height
 ตัวอย่าง: &lt;h1&gt;Hello, World!&lt;/h1&gt;
 &lt;img src="image.jpg" alt="A description of the image"&gt;</pre>
-    
-    <a href="#top">back to Top</a>
+    <p><a href="#top" class="back-to-top">Back To Top</a></p>
 
     <h2 id="heading">Heading</h2>
-    <P>HTML headings are defined with the &lt;h1&</P>
-    <a href="W03-01.html">workshop 01</a>
-    <a href="W03-heading-2-51.html"> | workshop 02</a>
-    <pre>
-    - &lt;h1&gt;: Heading 1
-    - &lt;h2&gt;: Heading 2
-    - &lt;h3&gt;: Heading 3
-    - &lt;h4&gt;: Heading 4
-    - &lt;h5&gt;: Heading 5
-    - &lt;h6&gt;: Heading 6
-
-    </pre>
-    
-    <a href="#top">back to Top</a>
+    <p>HTML headings are defined with the &lt;h1&gt; tag...</p>
+    <p>
+        <a href="W03-01.html">workshop 01</a> | 
+        <a href="W03-heading-2-51.html">workshop 02</a>
+    </p>
+    <pre>- &lt;h1&gt;: Heading 1
+- &lt;h2&gt;: Heading 2
+- &lt;h3&gt;: Heading 3
+- &lt;h4&gt;: Heading 4
+- &lt;h5&gt;: Heading 5
+- &lt;h6&gt;: Heading 6</pre>
+    <p><a href="#top" class="back-to-top">Back To Top</a></p>
 
     <h2 id="paragraph">Paragraph</h2>
-    <p>HTML paragraphs are defined with the <p> tag...   workshop  - &lt;</p>
-    <pre>
-  - &lt;p&gt;: Paragraph
-    </pre>
-    
-    <a href="#top">back to Top</a>
+    <p>HTML paragraphs are defined with the &lt;p&gt; tag...</p>
+    <pre>- &lt;p&gt;: Paragraph</pre>
+    <p><a href="#top" class="back-to-top">Back To Top</a></p>
 
     <h2 id="formatting">Text Formatting</h2>
     <p>HTML provides various elements to format text...</p>
+    <p><a href="W04-01-formatting.html">workshop Formatting</a></p>
     <pre>- &lt;h1&gt; to &lt;h6&gt;: Headings
 - &lt;p&gt;: Paragraph
 - &lt;pre&gt;: Preformatted text
@@ -149,13 +190,12 @@
 - &lt;sup&gt;: Superscript text
 - &lt;blockquote&gt;: Block quotation
 - &lt;q&gt;: Inline quotation
-- &lt;code&gt;: Code snippet
-    </pre>
-    
-    <a href="#top">back to Top</a>
+- &lt;code&gt;: Code snippet</pre>
+    <p><a href="#top" class="back-to-top">Back To Top</a></p>
 
     <h2 id="links">Creating Links</h2>
-    <P>HTML links are defined with the <&a> tag ...</P>
+    <p>HTML links are defined with the &lt;a&gt; tag ...</p>
+    <p><a href="W06-01-link_image.html">workshop Link and Image</a></p>
     <pre>- &lt;a href="url" target=""&gt;Link text&lt;/a&gt;
 - The href attribute specifies the URL of the page the link goes to
 - The target attribute specifies where to open the linked document
@@ -171,63 +211,15 @@
 - Example: &lt;h3 id="section"&gt;This is the Section&lt;/h3&gt;
 - Email links:
 - Use the mailto: prefix to create an email link
-- Example: &lt;a href="mailto:support@example.com">email us&lt;/a&gt;
+- Example: &lt;a href="mailto:support@example.com"&gt;email us&lt;/a&gt;
 - Download links:
 - Use the download attribute to create a download link
-- Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;
-</pre>
-    
-    <a href="#top">back to Top</a>
-    <h2 id="lists-dup">HTML Document Structure</h2>
+- Example: &lt;a href="file.txt" download&gt;Download Text File&lt;/a&gt;</pre>
+    <p><a href="#top" class="back-to-top">Back To Top</a></p>
+
+    <h2 id="lists">Lists (Ordered and Unordered)</h2>
     <p>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...</p>
-   <pre>
-- &lt;ul&gt;: Unordered list
-- &lt;ol&gt;: Ordered list
-- &lt;li&gt;: List item
-- Unordered list:
-- Use the &lt;ul&gt; tag to create an unordered list
-- Use the &lt;li&gt; tag to create each list item
-- Example:
-&lt;ul&gt;
-&lt;li&gt;Coffee&lt;/li&gt;
-&lt;li&gt;Tea&lt;/li&gt;
-&lt;li&gt;Milk&lt;/li&gt;
-&lt;/ul&gt;
-- Ordered list:
-- Use the &lt;ol&gt; tag to create an ordered list
-- Use the &lt;li&gt; tag to create each list item
-- Example:
-&lt;ol&gt;
-&lt;li&gt;Coffee&lt;/li&gt;
-&lt;li&gt;Tea&lt;/li&gt;
-&lt;li&gt;Milk&lt;/li&gt;
-&lt;/ol&gt;
-- List style types:
-- Use the list-style-type property to define the style of the list
-- Example: &lt;ul style="list-style-type: disc;"&gt;
-- Example: &lt;ul style="list-style-type: circle;"&gt;
-- Example: &lt;ul style="list-style-type: square;"&gt;
-- Example: &lt;ul style="list-style-type: none;"&gt;
-- Example: &lt;ol type="1"&gt;
-- Example: &lt;ol type="A"&gt;
-- Example: &lt;ol type="a"&gt;
-- Example: &lt;ol type="I"&gt;
-- Example: &lt;ol type="i"&gt;
-- Example: &lt;ol type="A" start="3"&gt;
-- Example: &lt;ol type="1" start="3"&gt;
-- Example: &lt;ol style="list-style-type: decimal;"&gt;
-- Example: &lt;ol style="list-style-type: upper-alpha;"&gt;
-- Example: &lt;ol style="list-style-type: lower-alpha;"&gt;
-- Example: &lt;ol style="list-style-type: upper-roman;"&gt;
-- Example: &lt;ol style="list-style-type: lower-roman;"&gt;
-</pre>
-    
-    <a href="#top">back to Top</a>
- <h2 id="lists">Lists (Ordered and Unordered)</h2>
- <p>HTML lists are defined with the &lt;ul&gt;, &lt;ol&gt;, and &lt;li&gt; tags...</p>
-    <pre>
-   
-- &lt;ul&gt;: Unordered list
+    <pre>- &lt;ul&gt;: Unordered list
 - &lt;ol&gt;: Ordered list
 - &lt;li&gt;: List item
 - Unordered list:
@@ -266,8 +258,7 @@
 - Example: &lt;ol style="list-style-type: lower-alpha;"&gt;
 - Example: &lt;ol style="list-style-type: upper-roman;"&gt;
 - Example: &lt;ol style="list-style-type: lower-roman;"&gt;</pre>
-    
-    <a href="#top">back to Top</a>
+    <p><a href="#top" class="back-to-top">Back To Top</a></p>
 
     <h2 id="images">Adding Images</h2>
     <p>HTML images are defined with the &lt;img&gt; tag...</p>
@@ -308,10 +299,8 @@ gap: 10px;
 width: 150px;
 height: 150px;
 object-fit: cover;
-}
-</pre>
-    
-    <a href="#top">back to Top</a>
+}</pre>
+    <p><a href="#top" class="back-to-top">Back To Top</a></p>
 
     <h2 id="tables">Creating Tables</h2>
     <p>HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;td&gt; tags...</p>
@@ -321,47 +310,41 @@ HTML tables are defined with the &lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, and &lt;
 - &lt;table&gt;: Table
 - &lt;tr&gt;: Table row
 - &lt;th&gt;: Table header
-- &lt;td&gt;: Table data/cell
-</pre>
-    
-    <a href="#top">back to Top</a>
+- &lt;td&gt;: Table data/cell</pre>
+    <p><a href="#top" class="back-to-top">Back To Top</a></p>
 
     <h2 id="forms">HTML Forms</h2>
     <p>HTML forms are defined with the &lt;form&gt; tag...</p>
-    <pre>หัวข ้อเกี่ยวกับฟอร์ม
+    <pre>หัวข้อเกี่ยวกับฟอร์ม
 1. โครงสร้างพื้นฐานของฟอร์ม
-- &lt;form>: ใชเ้ป็นตวัครอบขอ้มูลในฟอรม์
-- action และ method (GET/POST): การก าหนดปลายทางและวธิสี ง่ ขอ้มลู
+- &lt;form&gt;: ใช้เป็นตัวครอบข้อมูลในฟอร์ม
+- action และ method (GET/POST): การกำหนดปลายทางและวิธีส่งข้อมูล
 2. ชนิดของอินพุต (Input Types)
-- &lt;input>: ชนดิ ตา่ ง ๆ เชน่ text, password, email, number,
-radio, checkbox, date, file
-- &lt;textarea>: ชอ่ งขอ้ความขนาดใหญ่
-- &lt;select> และ &lt;option>: เมนูแบบเลื่อนลง
-- &lt;datalist>: รายการตัวเลือกที่ก าหนดไว ้ล่วงหน้า
-- &lt;optgroup>: กลุ่มตัวเลือก
-- &lt;fieldset> และ &lt;legend>: กลุ่มข ้อมูลที่เกี่ยวข ้อง
-3. ปุ่ มในฟอร์ม
-- &lt;button>: ปุ่มทั่วไป
-- &lt;input type="submit"> และ &lt;input type="reset">: ป่มุ สง่ และลา้งขอ้ มลู
-- &lt;input type="button">: ปุ่ มทั่วไป
-- &lt;input type="image">: ปุ่ มรูปภาพ
-- &lt;input type="file">: ปุ่ มอัพโหลดไฟล์
-4. การจัดการป้ายก ากับ (Labels)
-- &lt;label>: เพอื่ เชอื่ มกับ &lt;input> (ชว่ ยเพมิ่ การเขา้ถงึ)
-- for: ระบุ id ของอินพุตที่เกี่ยวข ้อง
-5. การตรวจสอบข ้อมูล (Validation)
-- คณุ สมบัติเชน่ required, min, max, pattern
-- การใช ้JavaScript เพื่อท าการตรวจสอบ
+- &lt;input&gt;: ชนิดต่าง ๆ เช่น text, password, email, number, radio, checkbox, date, file
+- &lt;textarea&gt;: ช่องข้อความขนาดใหญ่
+- &lt;select&gt; และ &lt;option&gt;: เมนูแบบเลื่อนลง
+- &lt;datalist&gt;: รายการตัวเลือกที่กำหนดไว้ล่วงหน้า
+- &lt;optgroup&gt;: กลุ่มตัวเลือก
+- &lt;fieldset&gt; และ &lt;legend&gt;: กลุ่มข้อมูลที่เกี่ยวข้อง
+3. ปุ่มในฟอร์ม
+- &lt;button&gt;: ปุ่มทั่วไป
+- &lt;input type="submit"&gt; และ &lt;input type="reset"&gt;: ปุ่มส่งและล้างข้อมูล
+- &lt;input type="button"&gt;: ปุ่มทั่วไป
+- &lt;input type="image"&gt;: ปุ่มรูปภาพ
+- &lt;input type="file"&gt;: ปุ่มอัพโหลดไฟล์
+4. การจัดการป้ายกำกับ (Labels)
+- &lt;label&gt;: เพื่อเชื่อมกับ &lt;input&gt; (ช่วยเพิ่มการเข้าถึง)
+- for: ระบุ id ของอินพุตที่เกี่ยวข้อง
+5. การตรวจสอบข้อมูล (Validation)
+- คุณสมบัติเช่น required, min, max, pattern
+- การใช้ JavaScript เพื่อทำการตรวจสอบ
 6. ฟอร์มแบบสมัยใหม่ (HTML5)
-- placeholder: ตัวอย่างขอ้ความในชอ่ งอนิ พุต
-- autofocus: ให ้ฟอร์มเริ่มต ้นโฟกัส
-7. การสง่ ฟอรม์ (Form Submission)
-- การสง่ ขอ้มลู ไปยังเซริฟ์ เวอร์
-- การใช ้JavaScript (เชน่ onsubmit)</pre>
-    
-    <a href="#top">back to Top</a>
-
-
+- placeholder: ตัวอย่างข้อความในช่องอินพุต
+- autofocus: ให้ฟอร์มเริ่มต้นโฟกัส
+7. การส่งฟอร์ม (Form Submission)
+- การส่งข้อมูลไปยังเซิร์ฟเวอร์
+- การใช้ JavaScript (เช่น onsubmit)</pre>
+    <p><a href="#top" class="back-to-top">Back To Top</a></p>
 
     <h2 id="semantic">Semantic HTML</h2>
     <p>Semantic HTML elements clearly define the content of a web page...</p>
@@ -371,20 +354,23 @@ radio, checkbox, date, file
 - &lt;article&gt;: Defines an article
 - &lt;aside&gt;: Defines content aside from the page content
 - &lt;footer&gt;: Defines a footer for a document or section</pre>
-    
-    <a href="#top">back to Top</a>
+    <p><a href="#top" class="back-to-top">Back To Top</a></p>
 
-    <h2 id="workshop">My Workshop</h2>
-    <ul>
-        <li><a href="#top">work shop 01:rabbit</a></li>
-        <li><a href="#top">work shop 02:login</a></li>
-    </ul>
     
-    <a href="#top">back to Top</a>
-    <hr>
-    <div class="text-center">
-        <a href="https://www.w3schools.com/html/"target="_blank">Learn more HTML</a>
-         <p>&copy; 2026 HTML Tutorial by Adison Phobiasi</p>
+    <div class="workshop-container" id="workshop">
+        <h2>My Workshop</h2>
+        <ul>
+            <li><a href="W03-01.html">workshop 01 : Heading</a></li>
+            <li><a href="W03-heading-2-51.html">workshop 02 : HTML Heading</a></li>
+            <li><a href="W04-01-formatting.html">workshop 03 : Formatting</a></li>
+            <li><a href="W06-01-link_image.html">work shop 04: link and image</a></li>
+        </ul>
+        <p><a href="#top">TOP</a></p>
+        <hr>
+        <p><a href="https://www.w3schools.com/html/" target="_blank">Learn more about HTML</a></p>
     </div>
+
+    <p style="margin-top: 15px;"><a href="#top" class="back-to-top">Back To Top</a></p>
+
 </body>
 </html>
