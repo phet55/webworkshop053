@@ -50,37 +50,142 @@
             </section>
 
             <!-- link example -->
-           <article class="card">
-            <h2>ตัวอย่างลิงก์(Link Example)</h2>
-            <div class="card-box">
-                <div class="card-b-l">
-                    <h3>ผลลัพธ์</h3>
-                    <div class="card-b-l-content">
-                        <p><a href="https://www.npru.ac.th/" target="_blank">นี่คือลิงก์ไปยังเว็บไซต์มหาลัย </a></p>
-                        <p><a href="https://www.google.com" target="_blank">เปิด google new tab </a></p>
-                        <p><a href="https://www.google.com" target="_blank">เปิด google new tab </a></p>
-                       
-                </div>
-                <div class="card-b-r">
-                    <h3>โค้ด HTML</h3>
-                    <div class="card-b-r-content">
-                        <pre><code>&lt;p&gt;&lt;a href="https://www.npru.ac.th/" target="_blank"&gt;นี่คือลิงก์ไปยังเว็บไซต์มหาลัย &lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://www.google.com" target="_blank"&gt;เปิด google new tab &lt;/a&gt;&lt;/p&gt;
-</code></pre>
-                                    
+    <article class="card">
+        <h2 class="card-title">🔗 ตัวอย่างลิงก์ (Link Examples)</h2>
+        
+        <div class="card-box">
+            <!-- ฝั่งซ้าย: ผลลัพธ์ -->
+            <div class="card-b-l">
+                <h3 class="box-header">ผลลัพธ์</h3>
+                <div class="card-b-l-content">
+                    <p><a href="https://www.npru.ac.th">ไปยังเว็บไซต์มหาวิทยาลัย</a></p>
+                    <p><a href="https://www.google.com" target="_blank">เปิด Google ในแท็บใหม่ ↗</a></p>
+                    <p><a href="mailto:teacher@example.com">✉️ ส่งอีเมลถึงผู้สอน</a></p>
+                    <span>
+                        <p><a href="index.html" class="btn-link">← กลับไปหน้าแรก</a></p>
+                    </span>
                 </div>
             </div>
-           </article>
-           <!-- image example -->
-           <article class="card"></article>
+
+            <!-- ฝั่งขวา: โค้ด HTML -->
+            <div class="card-b-r">
+    <h3 class="box-header">โค้ด HTML</h3>
+    <div class="card-b-r-content">
+        <pre><code><span class="line-num">1</span> <span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-str">"https://www.npru.ac.th"</span><span class="c-tag">&gt;</span><span class="c-txt">เว็บไซต์มหาวิทยาลัย</span><span class="c-tag">&lt;/a&gt;</span>
+<span class="line-num">2</span> <span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-str">"https://www.google.com"</span> <span class="c-attr">target</span>=<span class="c-str">"_blank"</span><span class="c-tag">&gt;</span>
+      <span class="c-txt">เปิด Google</span><span class="c-tag">&lt;/a&gt;</span>
+<span class="line-num">3</span> <span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-str">"mailto:teacher@example.com"</span><span class="c-tag">&gt;</span><span class="c-txt">ส่งอีเมล</span><span class="c-tag">&lt;/a&gt;</span>
+<span class="line-num">4</span> <span class="c-tag">&lt;a</span> <span class="c-attr">href</span>=<span class="c-str">"index.html"</span><span class="c-tag">&gt;</span><span class="c-txt">กลับหน้าแรก</span><span class="c-tag">&lt;/a&gt;</span></code></pre>
+    </div>
+</div>
+        </div>
+    </article>
+          <!-- image example -->
+<article class="card">
+    <h2 class="card-title">🖼️ ตัวอย่างรูปภาพ (Image Examples)</h2>
+    <div class="card-box">
+        <!-- ฝั่งซ้าย: ผลลัพธ์ -->
+        <div class="card-b-l">
+            <h3 class="box-header">ผลลัพธ์</h3>
+            <div class="card-b-l-content img-result-box">
+                <div class="img-item">
+                    <img src="images/npru-01.jpg" alt="ภาพมหาวิทยาลัย" >
+                    <p>ภาพมหาวิทยาลัย</p>
+                </div>
+                <div class="img-item">
+                    <img src="images/student.png" alt="นักศึกษากำลังเรียน">
+                    <p>นักศึกษากำลังเรียน</p>
+                </div>
+                <div class="img-item">
+                    <img src="images/banner-WebBasic.png" alt="" >
+                    <p>โลโก้วิชา</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ฝั่งขวา: โค้ด HTML -->
+        <div class="card-b-r">
+            <h3 class="box-header">โค้ด HTML</h3>
+            <div class="card-b-r-content">
+                <pre><code><span class="line-num">1</span> <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="string">"images/campus.jpg"</span> <span class="attr">alt</span>=<span class="string">"ภาพมหาวิทยาลัย"</span>
+    <span class="attr">width</span>=<span class="string">"220"</span><span class="tag">&gt;</span>
+<span class="line-num">2</span> <span class="tag">&lt;img </span> <span class="attr">src</span>=<span class="string">"images/student.jpg"</span> <span class="attr">alt</span>=<span class="string">"นักศึกษากำลังเรียน"</span>
+    <span class="attr">width</span>=<span class="string">"180"</span><span class="tag">&gt;</span>
+<span class="line-num">3</span> <span class="tag">&lt;img</span> <span class="attr">src</span>=<span class="string">"images/logo.png"</span> <span class="attr">alt</span>=<span class="string">"โลโก้วิชา"</span>
+    <span class="attr">height</span>=<span class="string">"80"</span><span class="tag">&gt;</span></code></pre>
+            </div>
+        </div>
+    </div>
+</article>
            </section>
 
-           <section class="right-sidebar">sidebar
-            
-           </section>
+          <section class="right-sidebar">
+  <!-- Card 1: จุดประสงค์การเรียนรู้ -->
+  <div class="side-card">
+    <h3 class="side-title">🎯 จุดประสงค์การเรียนรู้</h3>
+    <ul class="step-list">
+      <li><span class="num num-blue">1</span> อธิบายการใช้งานแท็ก &lt;a&gt; เพื่อสร้างลิงก์ไปยังหน้าเว็บหรือแหล่งต่าง ๆ</li>
+      <li><span class="num num-blue">2</span> แทรกรูปภาพด้วยแท็ก &lt;img&gt; พร้อมกำหนดคุณสมบัติพื้นฐาน</li>
+      <li><span class="num num-blue">3</span> ตกแต่งลิงก์และรูปภาพด้วย CSS เพื่อความสวยงามและน่าใช้งาน</li>
+    </ul>
+  </div>
+
+  <!-- Card 2: แท็กที่ใช้บ่อย -->
+  <div class="side-card">
+    <h3 class="side-title">🏷️ แท็กที่ใช้บ่อย</h3>
+    <div class="tag-container">
+      <span class="tag tag-a">&lt;a&gt;</span>
+      <span class="tag tag-href">href</span>
+      <span class="tag tag-target">target</span>
+      <span class="tag tag-img">&lt;img&gt;</span>
+      <span class="tag tag-src">src</span>
+      <span class="tag tag-alt">alt</span>
+      <span class="tag tag-width">width</span>
+      <span class="tag tag-height">height</span>
+    </div>
+  </div>
+
+  <!-- Card 3: กิจกรรมฝึกปฏิบัติ -->
+  <div class="side-card">
+    <h3 class="side-title">📋 กิจกรรมฝึกปฏิบัติ</h3>
+    <ul class="step-list">
+      <li><span class="num num-blue">1</span> สร้างลิงก์อย่างน้อย 3 แบบ</li>
+      <li><span class="num num-green">2</span> แทรกรูปภาพอย่างน้อย 2 รูป</li>
+      <li><span class="num num-orange">3</span> ใส่ alt ให้กับรูปภาพทุกภาพ</li>
+      <li><span class="num num-purple">4</span> ใส่ CSS เปลี่ยนสีลิงก์เมื่อ hover</li>
+      <li><span class="num num-pink">5</span> ตกแต่งรูปภาพด้วย border-radius หรือ box-shadow</li>
+      <li><span class="num num-teal">6</span> บันทึกไฟล์ชื่อ "link-image.html"</li>
+    </ul>
+  </div>
+
+  <!-- Card 4: สิ่งที่ต้องส่ง (Submit Card) -->
+  <div class="submit-card">
+    <div class="submit-icon">✈️</div>
+    <div class="submit-info">
+      <h4>สิ่งที่ต้องส่ง</h4>
+      <p>ส่งไฟล์ HTML พร้อมไฟล์และรูปภาพ</p>
+    </div>
+  </div>
+</section>
 
         </main>
-        <footer class="tipbox">tipbox</footer>
+        <footer class="tipbox">
+  
+  <div class="tip-icon-info">i</div>
+
+
+  <div class="tip-content">
+    <h3 class="tip-title">เกร็ดความรู้</h3>
+    <p>
+      แท็ก <span class="highlight">&lt;a&gt;</span> ใช้สำหรับสร้างลิงก์ (Hyperlink) เพื่อเชื่อมโยงไปยังหน้าเว็บ ไฟล์ หรือที่อยู่อีเมลต่าง ๆ โดยใช้แอตทริบิวต์ <span class="highlight">href</span> ระบุปลายทางของลิงก์ แท็ก <span class="highlight">&lt;img&gt;</span> ใช้สำหรับแทรกรูปภาพ โดยใช้แอตทริบิวต์ <span class="highlight">src</span> ระบุแหล่งที่อยู่ของไฟล์รูปภาพ และ <span class="highlight">alt</span> ระบุข้อความอธิบายรูปภาพ ซึ่งสำคัญต่อการเข้าถึงได้ (Accessibility) และช่วยแสดงข้อความเมื่อไม่สามารถโหลดรูปได้ • CSS สามารถใช้ตกแต่งลิงก์ด้วย <span class="highlight">link color</span>, เอฟเฟกต์เมื่อ <span class="highlight">hover</span>, ขนาดของรูปภาพ, ขอบ (<span class="highlight">border</span>), มุมโค้ง (<span class="highlight">border-radius</span>) และเงา (<span class="highlight">box-shadow</span>) เพื่อให้หน้าเว็บสวยงามและน่าใช้งานยิ่งขึ้น
+    </p>
+  </div>
+
+  <div class="tip-decorations">
+    <span class="decor-icon">💡</span>
+    <span class="decor-icon">📚</span>
+  </div>
+</footer>
     </div>
 
     

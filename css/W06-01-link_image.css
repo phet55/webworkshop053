@@ -97,23 +97,20 @@ body {
   margin: 15px; */
   display: grid;
   grid-template-columns: 1.5fr 0.8fr;
-  background: linear-gradient(100deg, rgb(253, 253, 253), rgb(71, 128, 250));
+  background: linear-gradient(100deg, rgb(253, 253, 253), rgb(214, 229, 245));
   border-radius: 12px;
   padding: 24px 36px;
-  box-shadow:
-    0,
-    4px,
-    12px rgb(109, 106, 106);
+ box-shadow: 0 8px 24px rgba(0, 110, 255, 0.2);
   min-height: 185px;
   align-items: center;
 }
 .hero-text h1 {
   font-size: 36px;
-  color: blue;
+  color: rgb(7, 7, 167);
 }
 .hero-text p {
   font-size: 21px;
-  color: blue;
+  color:  rgb(7, 7, 167);
   font-weight: 600;
 }
 .hero-photo img {
@@ -128,21 +125,398 @@ body {
 
 /* link-examle */
 .card {
-  border: 1px solid rgb(8, 73, 250);
+  border: 1px solid rgb(207, 207, 208);
   padding: 15px;
-  margin: 15px;
+  margin: 20px 0px;
+  background: linear-gradient(100deg, rgb(253, 253, 253), rgb(214, 229, 245));
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 110, 255, 0.2);
+}
+.card-title {
+  font-size: 24px;
+  color: rgb(8, 41, 133);
+  font-weight: 600;
+  
+}
+.card-box {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 16px;
+  width: 100%;
+}
+.card-b-l {
+  background-color: rgb(255, 255, 255);
+  border-radius: 12px;
+}
+.box-header {
+  font-size: 20px;
+  color: rgb(8, 41, 133);
+  font-weight: 600;
+  padding: 10px;
+  background: linear-gradient(100deg, rgb(253, 253, 253), rgb(182, 213, 247));
+  border-radius: 12px 12px 0px 0px;
+}
+.card-b-l-content {
+  flex: 1;
+  background-color: #ffffff;
+  border: 1px solid #d0e2f2;
+  padding: 10px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  broder-radius: 0px 0px 12px 12px;
+}
+.card-b-l-content .btn-link {
+  display: inline-block;
+  text-decoration: none;
+  border: 1.5px solid #1976d2;
+  color: #1976d2;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  width: fit-content;
+  transition: all 0.2s ease;
+}
+.card-b-l-content a {
+  color: #1976d2;
+  text-decoration: underline;
+}
+.card-b-l-content a:hover {
+  color: #0d47a1;
+}
+.card-b-r {
+  background-color: #071723;
+  border-radius: 12px;
+}
+.card-b-r-content {
+  background-color: #071723;
+  padding: 16px 20px;
+  flex: 1;
+   border-radius: 12px;
+}
+
+.card-b-r-content pre {
+  margin: 0;
+  font-family: "Fira Code", Consolas, "Courier New", monospace;
+  font-size: 13.5px;
+  line-height: 1.8;
+  white-space: pre-wrap;
+}
+
+/* เลขบรรทัด (สีฟ้าหม่น) */
+.card-b-r-content .line-num {
+  color: #5c7f99;
+  display: inline-block;
+  width: 20px;
+}
+
+/* แท็ก < และ <a> (สีส้มแดง) */
+.card-b-r-content .c-tag {
+  color: #ff5370;
+}
+
+/* แอตทริบิวต์ href, target (สีเขียวตอง) */
+.card-b-r-content .c-attr {
+  color: #c3e88d;
+}
+
+/* ข้อความในเครื่องหมายคำพูด (สีส้ม/เหลือง) */
+.card-b-r-content .c-str {
+  color: #ffcb6b;
+}
+
+/* ข้อความภาษาไทย (สีขาวสว่าง) */
+.card-b-r-content .c-txt {
+  color: #ffffff;
 }
 /* image-examle */
+/* จัดเรียงรูปภาพฝั่งซ้ายให้อยู่แถวเดียวกัน */
+.img-result-box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+/* กล่องแต่ละรูปพร้อมข้อความใต้ภาพ */
+.img-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.img-item img {
+  width: 85px;
+  height: 60px;
+  object-fit: cover;
+  border: 1px solid #d4e3f8;
+  border-radius: 6px;
+  background-color: #f1f7ff;
+}
+
+.img-item p {
+  font-size: 12px;
+  color: #1e293b;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* กล่องโค้ดฝั่งขวา */
+.card-b-r-content {
+  background-color: #071723;
+  padding: 16px 20px;
+  flex: 1;
+}
+
+.card-b-r-content pre {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.8;
+ 
+}
+
+
+.card-b-r-content .line-num {
+  color: #47637d;
+  display: inline-block;
+  width: 24px;
+}
+
+.card-b-r-content .tag {
+  color: #ff5370; /* แดง/ชมพู */
+}
+
+.card-b-r-content .attr {
+  color: #c3e88d; /* เขียวตองอ่อน */
+}
+
+.card-b-r-content .string {
+  color: #ffcb6b; /* เหลือง */
+}
 
 /* Right-sideber */
 .right-sidebar {
-  border: 1px solid rgb(196, 40, 29);
+  /* border: 1px solid rgb(196, 40, 29);
   padding: 15px;
-  margin: 15px;
+  margin: 15px; */
+}
+
+
+.img-result-box {
+  display: flex;
+  gap: 15px;           
+  width: 100%;          
+}
+
+
+.img-item {
+  flex: 1;              
+  text-align: center;
+}
+
+
+.img-item img {
+  width: 100%;         
+  height: 120px;       
+  object-fit: cover;    
+  border-radius: 8px;   
+}
+/* โครงสร้าง Sidebar หลัก */
+.right-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 380px;
+  background-color: #f4f7fc;
+  padding: 12px;
+  border-radius: 12px;
+  font-family: 'Sarabun', sans-serif;
+  margin: 0px 20px;
+  margin-bottom: 20px;
+}
+
+
+.side-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  margin:20px  0px;
+}
+
+.side-title {
+  color: #0b4386;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.step-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 1rem;
+  color: #334155;
+  line-height: 1.5;
+}
+
+.num {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* โทนสีตัวเลข */
+.num-blue { background-color: #2563eb; }
+.num-green { background-color: #16a34a; }
+.num-orange { background-color: #f59e0b; }
+.num-purple { background-color: #8b5cf6; }
+.num-pink { background-color: #ec4899; }
+.num-teal { background-color: #0d9488; }
+
+/* ปุ่มแท็ก (Tag Pills) */
+.tag-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.tag {
+  display: inline-block;
+  text-align: center;
+  padding: 6px 4px;
+  border-radius: 16px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+
+.tag-a { background-color: #e0edff; color: #1d4ed8; }
+.tag-href { background-color: #e0f2fe; color: #0284c7; }
+.tag-target { background-color: #dcfce7; color: #15803d; }
+.tag-img { background-color: #ffedd5; color: #c2410c; }
+.tag-src { background-color: #f3e8ff; color: #7e22ce; }
+.tag-alt { background-color: #ffe4e6; color: #be123c; }
+.tag-width { background-color: #ccfbf1; color: #0f766e; }
+.tag-height { background-color: #fef9c3; color: #a16207; }
+
+/* Submit Card (การ์ดเหลือง) */
+.submit-card {
+  background-color: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.submit-icon {
+  font-size: 1.5rem;
+  color: #2563eb;
+}
+
+.submit-info h4 {
+  margin: 0;
+  color: #0b4386;
+  font-size: 1rem;
+}
+
+.submit-info p {
+  margin: 2px 0 0 0;
+  color: #475569;
+  font-size: 0.85rem;
 }
 /* ================TipBox============ */
+/* กล่องหลัก Tipbox */
 .tipbox {
-  border: 1px solid rgb(34, 22, 189);
-  padding: 15px;
-  margin: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: #f0f6ff; /* โทนฟ้าอ่อน */
+  border: 1px solid #d0e2ff;
+  border-radius: 16px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.05);
+  position: relative;
+  font-family: 'Sarabun', sans-serif;
+  margin:20px;
+}
+
+
+.tip-icon-info {
+  width: 42px;
+  height: 42px;
+  background-color: #2563eb;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: serif; 
+  flex-shrink: 0;
+}
+
+/* ส่วนเนื้อหา */
+.tip-content {
+  flex: 1;
+}
+
+.tip-title {
+  color: #0b4386;
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+}
+
+.tip-content p {
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+.highlight {
+  color: #e11d48;
+  font-weight: 600;
+}
+
+
+.tip-decorations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-size:2rem;
+  flex-shrink: 0;
+  padding: 8px;
 }
