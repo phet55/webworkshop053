@@ -148,6 +148,85 @@ object-fit: cover;
 .breed{
 color: var(--mute-text-color);
 }
+
+
+/* =================
+ Advice
+ ================= */
+.advice h2{
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.advice {
+  background-color: var(--light-bg-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width:1165px;
+  margin: 0 auto;
+ 
+}
+
+.advice-setion{
+  display: flex;
+  flex-direction: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  box-shadow: var(--card-shadow);
+}
+
+.c1{
+  background-color:rgb(163, 188, 255);
+  border-radius: 1rem;
+  padding: 1rem;
+  
+}
+.c2{
+  background-color:rgb(219, 153, 228);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.c3{
+  background-color:rgb(148, 243, 185);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.c4{
+  background-color:rgb(243, 226, 150);
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.c1 h3{
+  color:rgb(44, 44, 204);
+  font-size: 1.15rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  
+}
+
+.c2 h3{
+  color:rgb(131, 9, 131);
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.c3 h3{
+  color:rgb(11, 119, 11);
+  font-size: 1.15rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.c4 h3{
+  color:rgb(156, 111, 13);
+  font-size: 1.15rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
 /*================
  header footer
   =================*/
