@@ -69,8 +69,15 @@ body {
 /*================
 nav
  =================*/
-
-nav a {
+.category-nav {
+  padding-block: 2rem;
+  text-align: center;
+}
+.filter-radio {
+  display: inline-block;
+  margin: 0 1rem;
+}
+.category-nav label{
   /* display: flex;
   flex-wrap: wrap; */
   gap: 2rem;
@@ -93,14 +100,50 @@ nav {
   text-align: center;
   padding-block: 2rem;
 }
-nav a.active {
-  background-color: var(--secondary-color);
-  color: var(--light-text-color);
-}
-nav a:hover {
+.category-nav label:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 14px rgb(148, 147, 147);
 }
+.filter-radio {
+  /* display: none; */
+
+  position: absolute;
+  overflow: hidden;
+  width: 0;
+  height: 0;
+}
+.filter-radio:has(#filter-all:checked) ~ .category-nav label[for="filter-all"],
+.filter-radio:has(#filter-dog:checked) ~ .category-nav label[for="filter-dog"],
+.filter-radio:has(#filter-cat:checked) ~ .category-nav label[for="filter-cat"],
+.filter-radio:has(#filter-brid:checked) ~ .category-nav label[for="filter-brid"],
+.filter-radio:has(#filter-fish:checked) ~ .category-nav label[for="filter-fish"],
+.filter-radio:has(#filter-small:checked) ~ .category-nav label[for="filter-small"] {
+  background-color: var(--secondary-color);
+  color: var(--light-text-color);
+}
+
+/* ซ่อนแสดดงหัวข้อ หมวดหมู่ */
+.category-title {
+  display: none;
+}
+.filter-radio:has(#filter-all:checked) ~ main .title-all,
+.filter-radio:has(#filter-dog:checked) ~ main .title-dog,
+.filter-radio:has(#filter-cat:checked) ~ main .title-cat,
+.filter-radio:has(#filter-brid:checked) ~ main .title-brid,
+.filter-radio:has(#filter-fish:checked) ~ main .title-fish,
+.filter-radio:has(#filter-small:checked) ~ main .title-small {
+  display: inline;
+}
+
+.filter-radio:has(#filter-dog:checked) ~ main .pet-grid .pet-card:not(.pet-dog),
+.filter-radio:has(#filter-cat:checked) ~ main .pet-grid .pet-card:not(.pet-cat),
+.filter-radio:has(#filter-brid:checked) ~ main .pet-grid .pet-card:not(.pet-brid),
+.filter-radio:has(#filter-fish:checked) ~ main .pet-grid .pet-card:not(.pet-fish),
+.filter-radio:has(#filter-small:checked) ~ main .pet-grid .pet-card:not(.pet-small) {
+  display: none;
+}
+
+
 /*================
 main
  =================*/
@@ -262,9 +305,16 @@ form legend {
   padding: 15px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
 }
-.radio-item input:checked + b {
+
+.radio-item label {
+  cursor: pointer;
+}
+
+.radio-item:has(input:checked) {
   background-color: var(--primary-color);
+  color: var(--light-text-color);
 }
 .radio-item input {
   accent-color: blue;
