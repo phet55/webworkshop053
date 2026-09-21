@@ -22,6 +22,9 @@
   --primary-color: rgb(50, 50, 155);
   --primary-dark-color: rgb(5, 5, 32);
   --secondary-color: rgb(94, 40, 245);
+  --red-color: rgb(199, 14, 14);
+  --green-color:rgb(7, 153, 7);
+
 }
 html {
   scroll-behavior: smooth;
@@ -40,6 +43,7 @@ body {
 
 .container {
   max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
 }
 /*================
@@ -77,7 +81,7 @@ nav
   display: inline-block;
   margin: 0 1rem;
 }
-.category-nav label{
+.category-nav label {
   /* display: flex;
   flex-wrap: wrap; */
   gap: 2rem;
@@ -115,9 +119,15 @@ nav {
 .filter-radio:has(#filter-all:checked) ~ .category-nav label[for="filter-all"],
 .filter-radio:has(#filter-dog:checked) ~ .category-nav label[for="filter-dog"],
 .filter-radio:has(#filter-cat:checked) ~ .category-nav label[for="filter-cat"],
-.filter-radio:has(#filter-brid:checked) ~ .category-nav label[for="filter-brid"],
-.filter-radio:has(#filter-fish:checked) ~ .category-nav label[for="filter-fish"],
-.filter-radio:has(#filter-small:checked) ~ .category-nav label[for="filter-small"] {
+.filter-radio:has(#filter-brid:checked)
+  ~ .category-nav
+  label[for="filter-brid"],
+.filter-radio:has(#filter-fish:checked)
+  ~ .category-nav
+  label[for="filter-fish"],
+.filter-radio:has(#filter-small:checked)
+  ~ .category-nav
+  label[for="filter-small"] {
   background-color: var(--secondary-color);
   color: var(--light-text-color);
 }
@@ -135,14 +145,25 @@ nav {
   display: inline;
 }
 
-.filter-radio:has(#filter-dog:checked) ~ main .pet-grid .pet-card:not(.pet-dog),
-.filter-radio:has(#filter-cat:checked) ~ main .pet-grid .pet-card:not(.pet-cat),
-.filter-radio:has(#filter-brid:checked) ~ main .pet-grid .pet-card:not(.pet-brid),
-.filter-radio:has(#filter-fish:checked) ~ main .pet-grid .pet-card:not(.pet-fish),
-.filter-radio:has(#filter-small:checked) ~ main .pet-grid .pet-card:not(.pet-small) {
+.filter-radio:has(#filter-dog:checked)
+  ~ main
+  .pet-grid
+  .pet-card:not(.show-dog),
+.filter-radio:has(#filter-cat:checked) ~ main .pet-grid .pet-card:not(.show-cat),
+.filter-radio:has(#filter-brid:checked)
+  ~ main
+  .pet-grid
+  .pet-card:not(.show-brid),
+.filter-radio:has(#filter-fish:checked)
+  ~ main
+  .pet-grid
+  .pet-card:not(.show-fish),
+.filter-radio:has(#filter-small:checked)
+  ~ main
+  .pet-grid
+  .pet-card:not(.pet-card:not(.show-small-pet)) {
   display: none;
 }
-
 
 /*================
 main
@@ -155,8 +176,10 @@ main
 }
 .pet-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
+  /* grid-template-columns: repeat(4,1fr) ; */
+  gap: 1rem;
+
+  grid-template-columns: repeat(auto-fit,minmax(min(100%,300px),1fr));
 }
 
 .pet-card {
@@ -189,7 +212,78 @@ main
 .breed {
   color: var(--mute-text-color);
 }
+/* รายละเอียดเพิ่มเติม */
+.pet-info {
+  list-style: none;
+}
+.info-lifespan {
+  color: var(--primary-color);
+}
+.info-size {
+  color: var(--red-color);
+}
+.info-temperament {
+  color:var(--green-color)
+}
 
+
+.pet-btn{
+  background-color: var(--primary-color);
+
+  color: var(--light-text-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  margin-block: 1rem;
+ 
+}
+.pet-btn:hover{
+  background-color:blue;
+  transform: translateY(-10px);
+  transition: 1s;
+}
+
+
+.pet-details[open]
+  .show-detail{
+    display: none;
+  }
+  .pet-details[open]
+  .hide-detail{
+    display: inline;
+  }
+  .hide-detail{
+    display: none;
+  }
+.pet-details summary{
+  list-style-type:none;
+}
+.pet-details[open]
+.text-open
+{display: none;}
+.pet-details[open]
+.text-close
+{display: inline;}
+.text-close{
+  display: none;
+}
+
+
+
+/* Detail body */
+.pet-details-body{
+  border-top: solid 1px gray;
+  padding-top: 1rem;
+
+  animation: appear 1s ease-out;
+}
+
+@keyframes appear{
+  from{opacity: 0;transform: translateY(-300px);}
+  to{opacity: 1;transform: translateY(0px);}
+}
 /* =================
  Advice
  ================= */
@@ -207,10 +301,15 @@ main
 }
 
 .advice-setion {
-  display: flex;
-  flex-direction: 1fr 1fr 1fr 1fr;
+  /* display: flex;
+  flex-direction: 1fr 1fr 1fr 1fr; */
   gap: 1rem;
   box-shadow: var(--card-shadow);
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  */
+
+  grid-template-columns: repeat(auto-fit,minmax(min(100%,250px),1fr));
 }
 
 .c1 {
@@ -264,6 +363,61 @@ main
   font-weight: bold;
   margin-bottom: 1rem;
 }
+
+/* ===========
+    Table
+    ========= */
+  .pet-table{
+    border-collapse: collapse;
+    background-color: rgb(237, 252, 252);
+    margin-top: 2rem;
+    width: 100%;
+    table-layout: fixed;
+
+  }
+  .pet-table th,
+   .pet-table td{
+    border: 1px solid rgb(5, 5, 5);
+    padding: 1rem;
+    vertical-align: top;
+    overflow-wrap: break-word;
+   }
+   .pet-table caption{
+    padding: 0.75rem;
+    font-size: 20px;
+    font-weight: bold;
+
+   }
+   th{
+    overflow-wrap: break-word;
+   }
+   thead{
+    background-color: rgb(58, 125, 226);
+   }
+   tbody th{
+    background-color: rgb(236, 240, 213);
+    white-space: nowrap;
+    color: var(--nav-text-color);
+    text-align: left;
+
+   }
+  .pet-table th:nth-child(1){width: 100px;}
+  .pet-table th:nth-child(2){width: 200px;}
+  .pet-table th:nth-child(3){width: 150px;}
+  .pet-table th:nth-child(4){width: 200px;}
+  .pet-table th:nth-child(5){width: 100px;}
+    
+  .guide-note{
+    border-left:solid 3px blue;
+    margin-top: 1rem;
+    padding: 10px;
+  }
+  tbody tr:nth-child(even){
+    background-color: aliceblue;
+  }
+   tbody tr:hover{
+    background-color: rgb(164, 165, 167);
+  }
 /* ===========
        Form
   ========= */
@@ -305,7 +459,9 @@ form legend {
   padding: 15px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 .radio-item label {
@@ -334,3 +490,32 @@ footer {
   padding: 1rem;
   margin-top: 1.5rem;
 }
+
+/* ===================
+    Reponsive
+    ================= */
+
+  @media (max-width:992px) {
+    .pet-grid {
+      
+      /* grid-template-columns: repeat(3,1fr) ;
+      margin: 0 50px; */
+      
+      }
+    .category-nav label{
+      display: block;
+      margin: 0.6rem 1rem;
+      border-radius: 10px;
+    }
+
+  }
+  
+  @media (max-width:768px) {
+     .pet-grid {
+/*       
+      grid-template-columns: 1fr ;
+      margin: 0 50px; */
+
+      }
+
+  }
