@@ -1,0 +1,385 @@
+:root {
+  /* background-color */
+  --header-bg-color: rgb(252, 253, 255);
+  --light-bg-color: rgb(236, 234, 234);
+  --footer-bg-color: black;
+
+  /* text-color */
+  --mute-text-color: rgb(71, 70, 70);
+  --nav-text-color: rgb(48, 46, 46);
+  --light-text-color: rgb(238, 234, 234);
+
+  /* shadow-color */
+  --header-shadow: 0 4px 10px rgb(218, 216, 216);
+  --card-shadow: 0 4px 10px rgb(241, 237, 237);
+
+  /*main-color-web*/
+  --primary-color: rgb(50, 50, 155);
+  --primary-dark-color: rgb(5, 5, 32);
+  --secondary-color: rgb(94, 40, 245);
+  --red-color: rgb(199, 14, 14);
+  --green-color:rgb(7, 153, 7);
+
+}
+.carousel-inner .carousel-item img {
+    width: 100%;
+    /* max-height: 550px; */
+    height:calc(100vh-160vh)
+    object-fit: cover;
+    object-position: center;
+}
+
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 2rem 0;
+}
+
+.category-btn {
+  border: 1px solid var(--primary-color);
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  background-color: white;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+/* =================
+ Advice
+ ================= */
+.advice h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.advice {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  max-width: 1165px;
+  margin: 30px auto;
+  border: 1px solid black;
+  box-shadow: var(--card-shadow);
+  
+}
+
+.advice-setion {
+  /* display: flex;
+  flex-direction: 1fr 1fr 1fr 1fr; */
+  gap: 2rem;
+  box-shadow: var(--card-shadow);
+  display: grid;
+  /* grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  */
+
+  grid-template-columns: repeat(auto-fit,minmax(min(100%,250px),1fr));
+}
+
+.c1 {
+  border-left: 5px solid rgb(163, 188, 255);
+  
+  
+}
+.c2 {
+  border-left: 5px solid rgb(241, 21, 32);
+
+}
+.c3 {
+  border-left: 5px solid rgb(148, 243, 185);
+
+}
+.c4 {
+  border-left: 5px solid rgb(243, 226, 150);
+
+}
+
+/* .c1 h3 {
+  color: rgb(44, 44, 204);
+  font-size: 1.15rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.c2 h3 {
+  color: rgb(131, 9, 131);
+  font-size: 1.15rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.c3 h3 {
+  color: rgb(11, 119, 11);
+  font-size: 1.15rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.c4 h3 {
+  color: rgb(156, 111, 13);
+  font-size: 1.15rem;
+  line-height: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+} */
+
+/* Pet-grid */
+
+.pet-grid {
+  display: grid;
+  /* grid-template-columns: repeat(4,1fr) ; */
+  gap: 1rem;
+
+  grid-template-columns: repeat(auto-fit,minmax(min(100%,300px),1fr));
+}
+
+.pet-card {
+  margin: 20px;
+  background-color: var(--light-bg-color);
+  box-shadow: var(--card-shadow);
+  padding: 0 0 20px 0;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: block;
+  transition: tranform 0.25s;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+}
+.pet-card img {
+  width: 100%;
+  height: 16.25rem;
+  object-fit: cover;
+}
+
+.pet-content {
+  padding: 1.25rem;
+}
+
+.pet-content h2 {
+  color: var(--primary-color);
+}
+.breed {
+  color: var(--mute-text-color);
+}
+/* รายละเอียดเพิ่มเติม */
+.pet-info {
+  list-style: none;
+}
+.info-lifespan {
+  color: var(--primary-color);
+}
+.info-size {
+  color: var(--red-color);
+}
+.info-temperament {
+  color:var(--green-color)
+}
+
+
+.pet-btn{
+  background-color: var(--primary-color);
+
+  color: var(--light-text-color);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  cursor: pointer;
+  margin-block: 1rem;
+ 
+}
+.pet-btn:hover{
+  background-color:blue;
+  transform: translateY(-10px);
+  transition: 1s;
+}
+
+
+.pet-details[open]
+  .show-detail{
+    display: none;
+  }
+  .pet-details[open]
+  .hide-detail{
+    display: inline;
+  }
+  .hide-detail{
+    display: none;
+  }
+.pet-details summary{
+  list-style-type:none;
+}
+.pet-details[open]
+.text-open
+{display: none;}
+.pet-details[open]
+.text-close
+{display: inline;}
+.text-close{
+  display: none;
+}
+
+
+
+/* Detail body */
+.pet-details-body{
+  border-top: solid 1px gray;
+  padding-top: 1rem;
+
+  animation: appear 1s ease-out;
+}
+
+@keyframes appear{
+  from{opacity: 0;transform: translateY(-300px);}
+  to{opacity: 1;transform: translateY(0px);}
+}
+/* ========================
+         Category Filter
+===========================*/
+ 
+.category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.category-btn {
+    padding: 0.625rem 1.25rem;
+    border-radius: 9999px;
+    border: none;
+   
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+   
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+.category-btn:not(.active) {
+    background: white;
+    color: #374151;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.category-btn:not(.active):hover {
+    background: #f3f4f6;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.category-btn.active {
+    background: linear-gradient(to right, #3b82f6, #a855f7);
+    color: white;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    transform: scale(1.05);
+}
+ 
+ 
+ 
+ 
+/* ================================= */
+/* =========== Pet Grid ============ */
+/* ================================= */
+ 
+/* เพิ่ม */
+.pet-category-badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+/* เพิ่ม */
+.pet-image-container {
+    position: relative;
+    height: 16rem;
+    overflow: hidden;
+}
+ 
+/* ========================
+    Pet info
+    ปุ่มซ่อน แสดง รายละเอียด
+===========================*/
+ 
+/* เพิ่ม */
+.pet-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+/* เพิ่ม */
+.pet-info-icon {
+    width: 1rem;
+    height: 1rem;
+}
+ 
+ 
+/* เพิ่ม */
+.pet-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+}
+
+/* เพิ่ม */
+.pet-info-icon {
+    width: 1rem;
+    height: 1rem;
+}
+ 
+ 
+ 
+ 
+ 
+/* เพิ่ม */
+.pet-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    animation: fadeIn 0.3s;
+}
+
+.pet-details-section {
+    margin-bottom: 0.75rem;
+}
+
+.pet-details-title {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 0.25rem;
+}
+
+.pet-details-text {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.hidden {
+    display: none;
+}
+ 
+ 
